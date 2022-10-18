@@ -31,4 +31,6 @@ public class OptionsInfo:MonoBehaviour
             option.TargetOption.OnOptionValueChange += option.ReferenceValueObject.SetValue;
         });
     }
+    
+    public List<ISliderInfo> GetSliders=>_options;
 }

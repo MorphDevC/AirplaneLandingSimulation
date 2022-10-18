@@ -12,6 +12,14 @@ public class SliderInfo:MonoBehaviour,ISliderInfo
     public float GetCurrentValue { get; private set; }
     public float GetMinValue { get; private set; }
     public float GetMaxValue { get; private set;}
+
+
+    public void RefreshValues()
+    {
+        ChangeValue(_defaultValue);
+        _localSliderComponent.value = _defaultValue;
+    }
+
     public PropertyTag GetTargetTag { get; private set; }
     
     [SerializeField] private PropertyTag _targetPropertyTag;
@@ -34,6 +42,8 @@ public class SliderInfo:MonoBehaviour,ISliderInfo
         GetMaxValue = targetSlider.maxValue;
         targetText.text = GetCurrentValue.ToString(CultureInfo.InvariantCulture);
         GetTargetTag = targetTag;
+
+        _defaultValue = GetCurrentValue;
     }
 
     private void ChangeValue(float value)
@@ -46,4 +56,5 @@ public class SliderInfo:MonoBehaviour,ISliderInfo
     
 
     private Slider _localSliderComponent = null;
+    private float _defaultValue;
 }

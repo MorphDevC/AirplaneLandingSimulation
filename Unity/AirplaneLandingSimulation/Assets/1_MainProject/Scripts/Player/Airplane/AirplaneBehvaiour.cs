@@ -1,25 +1,30 @@
 ﻿using System;
 using System.Collections.Generic;
+using UniRx;
 using UnityEngine;
+using UnityEngine.UIElements;
 
 
-[RequireComponent(typeof(AirplaneOptions))]
-public class AirplaneBehvaiour:MonoBehaviour
+[RequireComponent(typeof(AirplaneSettings))]
+public class AirplaneBehvaiour : MonoBehaviour
 {
-    private AirplaneOptions _airplaneOptions;
+    private AirplaneSettings _airplaneOptions;
 
-    private void Awake()
+    public virtual void Awake()
     {
-        _airplaneOptions = GetComponent<AirplaneOptions>();
+        _airplaneOptions = GetComponent<AirplaneSettings>();
     }
 
     public virtual void Start()
     {
-        
+        SetDefaultPosition(_airplaneOptions);
     }
 
-    private void SetDefaultPosition(AirplaneOptions targetOptions)
+
+
+    private void SetDefaultPosition(AirplaneSettings targetOptions)
     {
-        
+        Debug.Log("G sah been pressed");
     }
+
 }

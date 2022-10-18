@@ -6,5 +6,6 @@ public interface ISliderInfo
     float GetCurrentValue { get; }
     float GetMinValue { get; }
     float GetMaxValue { get; }
+    void RefreshValues();
     PropertyTag GetTargetTag { get; }
 }
