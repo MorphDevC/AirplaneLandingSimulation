@@ -90,6 +90,13 @@ public class ScreenshotMaker: MonoBehaviour
         Destroy(_rt.flip);
         Destroy(_rt.grab);
 
-        _buffer.Dispose();
+        try
+        {
+            _buffer.Dispose();
+        }
+        catch
+        {
+            // ignored
+        }
     }
 }
