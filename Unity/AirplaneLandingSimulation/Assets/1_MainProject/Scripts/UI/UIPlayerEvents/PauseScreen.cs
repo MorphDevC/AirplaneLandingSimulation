@@ -6,7 +6,7 @@ using UnityEngine;
 [RequireComponent(typeof(CanvasGroup))]
 public class PauseScreen : MonoBehaviour
 {
-    [SerializeField] private AirplaneFlying _airplaneFlyingRef;
+    [SerializeField] private AirplaneManager _airplaneFlyingRef;
 
     private CanvasGroup _canvasGroup;
     private bool _isFadeIn = false;
