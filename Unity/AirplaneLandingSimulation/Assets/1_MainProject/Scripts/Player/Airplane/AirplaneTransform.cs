@@ -30,7 +30,6 @@ public class AirplaneTransform : AirplaneBehaviour
     
     public void UpdateTransform(object sender)
     {
-        Debug.Log("Hi?");
         SetPosition(AirplaneOptions);
         SetRotation(AirplaneOptions);
     }

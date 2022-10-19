@@ -28,10 +28,15 @@ public class ScreenshotMaker: MonoBehaviour
     private void MakeScreenshot(object sender)
     {
         if(_isButtonPressedTwicly)
+        {
+            //TODO: _isButtonPressedTwicly = !_isButtonPressedTwicly; repeats twice. Take out for other logic 
+            _isButtonPressedTwicly = !_isButtonPressedTwicly;
             return;
-        
+        }
+
+        Debug.Log("its ok");
         _pathCreatedDirictory =Directory.CreateDirectory(Application.dataPath+$"/Screenshots/Session_{DateTime.Today.ToString("dd-MM-yyyy")+"-Time-"+DateTime.Now.ToString("hh-mm-ss")}");
-     
+        _screenshotCounter = 0;
         var (w, h) = (Screen.width, Screen.height);
     
         _rt.grab = new RenderTexture(w, h, 0);
@@ -90,13 +95,15 @@ public class ScreenshotMaker: MonoBehaviour
         Destroy(_rt.flip);
         Destroy(_rt.grab);
 
+        //TODO: Remove try catch 
         try
         {
             _buffer.Dispose();
         }
         catch
         {
-            // ignored
+            //ignore
         }
+        
     }
 }
