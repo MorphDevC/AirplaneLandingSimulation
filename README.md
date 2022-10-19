@@ -2,7 +2,8 @@
 
 ## Description
 
-In this repo you can start base airplane simulation
+In this repo you can start base airplane landing simulation.
+To Start simulation press ```G```
 
 ## Base opportunities
 1. In the upper right corner by clicking on the gear wheel, a drop-down menu of settings will open
