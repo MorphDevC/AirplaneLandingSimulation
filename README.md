@@ -2,7 +2,8 @@
 
 ## Description
 
-In this repo you can start base airplane landing simulation
+In this repo you can start base airplane landing simulation.
+
 To Start simulation press button ```G```
 
 ## Base opportunities
